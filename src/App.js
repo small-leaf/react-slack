@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Header />
         <AppBody>
+          <Sidebar />
           <Switch>
             <Route exact path="/">
               {/* Chat */}
@@ -26,4 +28,7 @@ function App() {
 
 export default App;
 
-const AppBody = styled.div``;
+const AppBody = styled.div`
+  display: flex;
+  height: 100vh;
+`;
